@@ -1,0 +1,311 @@
+body {
+background-color: #0f0f0f;
+color: white;
+font-family: Arial, sans-serif;
+margin: 0;
+text-align: center;
+}
+
+h1 {
+color: #ff3b3b;
+font-size: 52px;
+margin-top: 160px;
+margin-bottom: 10px;
+}
+
+.frase {
+font-size: 28px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.descripcion {
+font-size: 20px;
+max-width: 700px;
+margin: 0 auto 30px;
+line-height: 1.6;
+}
+
+.boton {
+display: inline-block;
+background-color: #ff3b3b;
+color: white;
+text-decoration: none;
+padding: 14px 28px;
+border-radius: 10px;
+font-size: 18px;
+font-weight: bold;
+}
+
+.boton:hover {
+background-color: #d92f2f;
+}
+
+section {
+max-width: 800px;
+margin: 80px auto;
+padding: 0 20px 60px;
+}
+
+h2 {
+color: #ff3b3b;
+font-size: 34px;
+margin-bottom: 20px;
+}
+
+section p {
+font-size: 20px;
+line-height: 1.8;
+}.tarjeta {
+background-color: #1a1a1a;
+border: 1px solid #2c2c2c;
+border-radius: 12px;
+padding: 20px;
+margin: 20px auto;
+max-width: 700px;
+}
+
+.tarjeta h3 {
+color: #ff3b3b;
+font-size: 24px;
+margin-bottom: 10px;
+}
+
+.tarjeta p {
+font-size: 18px;
+line-height: 1.6;
+}nav {
+background-color: #111;
+padding: 20px;
+text-align: center;
+position: sticky;
+top: 0;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+margin: 0 15px;
+font-size: 18px;
+font-weight: bold;
+}
+
+nav a:hover {
+color: #ff3b3b;
+}#contacto {
+max-width: 800px;
+margin: 80px auto;
+padding: 0 20px 60px;
+}
+
+#contacto {
+padding: 160px 20px 80px;
+text-align: center;
+scroll-margin-top: 140px;
+}
+
+footer {
+background-color: #111;
+color: #bbb;
+text-align: center;
+padding: 25px 20px;
+font-size: 16px;
+}s#sobre {
+padding-top: 180px;
+margin-top: -180px;
+}.tarjeta {
+background-color: #111;
+border: 1px solid #333;
+margin: 20px auto;
+padding: 20px;
+width: 80%;
+border-radius: 12px;
+}
+
+.tarjeta h2 {
+color: red;
+margin-bottom: 10px;
+}
+
+.tarjeta p {
+color: white;
+font-size: 18px;
+}.boton-volver {
+display: inline-block;
+margin: 30px auto;
+padding: 12px 24px;
+background-color: red;
+color: white;
+text-decoration: none;
+border-radius: 10px;
+font-size: 18px;
+font-weight: bold;
+}
+.boton-volver {
+display: inline-block;
+margin-top: 30px;
+padding: 14px 30px;
+background: linear-gradient(45deg, #ff2a2a, #ff6600);
+color: white;
+text-decoration: none;
+border-radius: 30px;
+font-size: 18px;
+font-weight: bold;
+box-shadow: 0 4px 15px rgba(255, 60, 0, 0.4);
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.boton-volver {
+display: inline-block;
+margin-top: 30px;
+padding: 12px 28px;
+background-color: transparent;
+color: white;
+text-decoration: none;
+border: 2px solid white;
+border-radius: 30px;
+font-size: 17px;
+font-weight: 600;
+letter-spacing: 0.5px;
+transition: all 0.3s ease;
+}
+
+.boton-volver:hover {
+background-color: white;
+color: black;
+}.boton-volver {
+display: inline-block;
+margin-top: 30px;
+padding: 12px 28px;
+background-color: transparent;
+color: white;
+text-decoration: none;
+border: 2px solid white;
+border-radius: 30px;
+font-size: 17px;
+font-weight: 600;
+letter-spacing: 0.5px;
+transition: all 0.3s ease;
+}
+
+.boton-volver:hover {
+background-color: white;
+color: black;
+}<div class="contenedor-volver">
+<a href="index.html" class="boton-volver">Volver al inicio</a>
+</div>s.tarjeta {
+background-color: rgba(255, 255, 255, 0.05);
+border: 1px solid rgba(255, 255, 255, 0.08);
+border-radius: 14px;
+padding: 25px;
+margin: 20px auto;
+width: 80%;
+max-width: 800px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.tarjeta h3 {
+color: red;
+margin-bottom: 10px;
+font-size: 28px;
+}
+
+.tarjeta p {
+font-size: 20px;
+color: white;
+}
+
+.boton-volver {
+display: inline-block;
+margin-top: 30px;
+background: linear-gradient(135deg, #ff2d2d, #990000);
+color: white;
+text-decoration: none;
+padding: 14px 30px;
+border-radius: 30px;
+font-weight: bold;
+font-size: 18px;
+box-shadow: 0 4px 12px rgba(255, 0, 0, 0.35);
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boton-volver:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 18px rgba(255, 0, 0, 0.45);
+}
+
+.contenedor-volver {
+text-align: center;
+margin: 40px 0;
+}
+
+#contacto {
+padding: 160px 20px 80px;
+text-align: center;
+scroll-margin-top: 140px;
+}
+
+#contacto h2 {
+color: red;
+font-size: 42px;
+margin-bottom: 20px;
+}
+
+#contacto p {
+font-size: 22px;
+color: white;
+margin: 10px 0;
+}
+
+section {
+scroll-margin-top: 140px;
+}
+
+#inicio,
+#sobre,
+#episodios,
+#contacto {
+scroll-margin-top: 140px;
+}.formulario-contacto {
+max-width: 600px;
+margin: 30px auto 0;
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+width: 100%;
+padding: 14px;
+border: 1px solid #444;
+border-radius: 10px;
+background-color: #111;
+color: white;
+font-size: 16px;
+box-sizing: border-box;
+}
+
+.formulario-contacto textarea {
+min-height: 140px;
+resize: vertical;
+}
+
+.formulario-contacto button {
+background-color: red;
+color: white;
+border: none;
+padding: 14px;
+border-radius: 10px;
+font-size: 18px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.formulario-contacto button:hover {
+background-color: darkred;
+}#mensaje-enviado {
+margin-top: 20px;
+color: lightgreen;
+font-size: 18px;
+font-weight: bold;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compañeros sin filtro</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#sobre">Sobre el podcast</a>
+<a href="episodios.html">Episodios</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+<section id="inicio">
+<h1>Compañeros sin filtro</h1>
+<p class="frase">Somos la voz de la calle</p>
+<p class="descripcion">Un podcast de charlas picantes, relajadas y reales.</p>
+<a href="#sobre" class="boton">Conócenos</a>
+
+</section>
+
+<section id="sobre">
+<h2>Sobre el podcast</h2>
+<p>
+Compañeros sin filtro es un espacio donde hablamos claro,
+sin rodeos y con personalidad. Tocamos temas reales,
+opiniones sinceras y conversaciones con sabor callejero,
+pero relajadas y auténticas.
+</p>
+</section>
+
+<section id="episodios">
+<h2>Episodios sin filtro</h2>
+
+<div class="tarjeta">
+<h3>Episodio 01</h3>
+<p>Una charla directa sobre la realidad de la calle, las amistades y lo que nadie quiere decir.</p>
+</div>
+
+<div class="tarjeta">
+<h3>Episodio 02</h3>
+<p>Opiniones sinceras, momentos incómodos y conversaciones relajadas con sabor real.</p>
+</div>
+
+<div class="tarjeta">
+<h3>Episodio 03</h3>
+<p>Historias, experiencias y temas que conectan con la gente sin poses y sin filtro.</p>
+</div>
+</section>
+
+<section id="contacto">
+<h2>Contacto</h2>
+<p>¿Quieres colaborar, anunciarte o compartir tu historia?</p>
+<p>Escríbenos a: contacto@companerosfiltro.com</p>
+<form id="formulario" class="formulario-contacto" onsubmit="enviarFormulario(event)">
+<input type="text" placeholder="Tu nombre" required>
+<input type="email" placeholder="Tu correo" required>
+<textarea placeholder="Escribe tu mensaje" required></textarea>
+<button type="submit">Enviar mensaje</button>
+</form>
+<p id="mensaje-enviado"></p>
+</section>
+
+<footer>
+<p>Compañeros sin filtro © 2026 | Somos la voz de la calle</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>.contenedor-volver {
+text-align: center;
+margin-top: 20px;
+}
