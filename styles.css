@@ -363,4 +363,34 @@ transition: transform 0.2s ease, box-shadow 0.2s ease;
 .boton-video:hover {
 transform: translateY(-2px);
 box-shadow: 0 6px 16px rgba(255, 0, 0, 0.45);
+}.redes-sociales {
+margin-top: 25px;
+display: flex;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
+}
+
+.boton-red {
+display: inline-block;
+padding: 12px 24px;
+border-radius: 12px;
+text-decoration: none;
+color: white;
+font-size: 18px;
+font-weight: bold;
+transition: 0.3s ease;
+}
+
+.youtube {
+background-color: #ff0000;
+}
+
+.tiktok {
+background-color: #111;
+border: 2px solid white;
+}
+
+.boton-red:hover {
+transform: scale(1.05);
 }
