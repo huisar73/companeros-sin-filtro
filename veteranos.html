@@ -11,30 +11,63 @@
             color:white; 
             text-align:center; 
         }
-        img {
-            max-width: 85%;
-            border: 5px solid #ffcc00;
-            border-radius: 15px;
-            margin: 30px auto;
-            box-shadow: 0 0 20px rgba(255,204,0,0.5);
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('vete1.jpg') center/cover;
+            height: 65vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .partidos {
+            background: #1a1a1a;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 0 0 15px 15px;
+        }
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .galeria img {
+            max-width: 380px;
+            max-height: 280px;
+            width: auto;
+            height: auto;
+            border: 3px solid #ffcc00;
+            border-radius: 12px;
+            object-fit: cover;           /* Esto arregla fotos anchas */
+            box-shadow: 0 0 15px rgba(255,204,0,0.4);
         }
     </style>
 </head>
 <body>
 
-    <h1 style="font-size: 3.8rem; margin: 40px 0 20px;">⚽ Liga de Veteranos</h1>
+    <div class="hero">
+        <h1>⚽ Liga de Veteranos</h1>
+    </div>
 
-    <img src="vete1.jpg" alt="Liga Veteranos">
-
-    <div style="max-width:900px; margin:40px auto; background:#1a1a1a; padding:40px; border-radius:15px;">
-        <h2>Próximos Encuentros</h2>
-        <p style="font-size:1.7rem; line-height:2.2;">
-            • Atlético San Pancho vs Marinos<br>
+    <div class="partidos">
+        <h2 style="color:#ffcc00; margin-bottom:20px;">Próximos Encuentros</h2>
+        <p style="font-size:1.8rem; line-height:2.3;">
+            • Atlético San Pancho vs Marinos<br><br>
             • Dominicanos vs Peruanos
         </p>
     </div>
 
-    <a href="index.html" style="color:#ffcc00; font-size:1.5rem; margin:40px; display:inline-block;">← Volver a Inicio</a>
+    <h2 style="margin:50px 0 25px;">Fotos de los Partidos</h2>
+
+    <div class="galeria">
+        <img src="foto2.jfif" alt="Foto 2">
+        <img src="equipo1.jfif" alt="Equipo 1">
+    </div>
+
+    <a href="index.html" style="color:#ffcc00; font-size:1.5rem; margin:50px; display:inline-block;">← Volver a Inicio</a>
 
 </body>
 </html>
