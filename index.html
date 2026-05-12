@@ -1,73 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Compañeros sin filtro</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Compañeros sin filtro</title>
+    <style>
+        body { margin:0; font-family: Arial, sans-serif; background:#0f0f0f; color:white; text-align:center; }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('robe.jfif') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 { font-size: 5.2rem; margin: 10px; text-shadow: 4px 4px 20px black; }
+        p { font-size: 2.4rem; margin: 8px; text-shadow: 3px 3px 15px black; }
+        
+        .boton {
+            display: inline-block;
+            margin: 12px;
+            padding: 16px 40px;
+            background: #ffcc00;
+            color: black;
+            font-size: 1.3rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-<nav>
-<a href="#inicio">Inicio</a>
-<a href="#sobre">Sobre el podcast</a>
-<a href="episodios.html">Episodios</a>
-<a href="#contacto">Contacto</a>
-</nav>
 
-<section id="inicio">
-<h1>Compañeros sin filtro</h1>
-<p class="frase">Somos la voz de la calle</p>
-<p class="descripcion">Un podcast de charlas picantes, relajadas y reales.</p>
-<a href="#sobre" class="boton">Conócenos</a>
+    <div class="hero">
+        <h1>Compañeros sin filtro</h1>
+        <p>La Voz de la Calle</p>
+        
+        <div style="margin-top: 40px;">
+            <a href="veteranos.html" class="boton">Liga Veteranos</a>
+            <a href="#podcast" class="boton">Episodios</a>
+            <a href="#comunidad" class="boton">Compañeros</a>
+            <a href="https://www.tiktok.com/@companerossinfiltro" target="_blank" class="boton" style="background:#000;color:white;">TikTok</a>
+            <a href="https://www.youtube.com/@Companerossinfiltro" target="_blank" class="boton" style="background:#ff0000;color:white;">YouTube</a>
+        </div>
+    </div>
 
-</section>
-
-<section id="sobre">
-<h2>Sobre el podcast</h2>
-<p>
-Compañeros sin filtro es un espacio donde hablamos claro,
-sin rodeos y con personalidad. Tocamos temas reales,
-opiniones sinceras y conversaciones con sabor callejero,
-pero relajadas y auténticas.
-</p>
-</section>
-
-<section id="episodios">
-<h2>Episodios sin filtro</h2>
-
-<div class="tarjeta">
-<h3>Episodio 01</h3>
-<p>Una charla directa sobre la realidad de la calle, las amistades y lo que nadie quiere decir.</p>
-</div>
-
-<div class="tarjeta">
-<h3>Episodio 02</h3>
-<p>Opiniones sinceras, momentos incómodos y conversaciones relajadas con sabor real.</p>
-</div>
-
-<div class="tarjeta">
-<h3>Episodio 03</h3>
-<p>Historias, experiencias y temas que conectan con la gente sin poses y sin filtro.</p>
-</div>
-</section>
-
-<section id="contacto">
-<h2>Contacto</h2>
-<p>¿Quieres colaborar, anunciarte o compartir tu historia?</p>
-
-<a href="mailto:companerossinfiltro@gmail.com" class="correo-link">
-Escríbenos a: companerossinfiltro@gmail.com
-</a>
-
-<div class="redes-sociales">
-<a href="https://youtube.com/@companerossinfiltro?si=9YsJrfc7qm3Hqbi5" target="_blank" class="boton-red youtube">YouTube</a>
-<a href="https://www.tiktok.com/@companerossinfiltro?_r=1&_t=ZT-95nM6AwvkY2" target="_blank" class="boton-red tiktok">TikTok</a>
-</div>
-</section>
-
-<footer>
-<p>Compañeros sin filtro © 2026 | Somos la voz de la calle</p>
-</footer>
-<script src="script.js"></script>
 </body>
 </html>
