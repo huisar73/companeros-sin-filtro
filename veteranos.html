@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liga de Veteranos</title>
     <style>
         body { 
@@ -12,37 +13,56 @@
             text-align:center; 
         }
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('vete1.jpg') center/cover;
-            height: 65vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('vete1.jpg') center/cover no-repeat;
+            height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-        .partidos {
-            background: #1a1a1a;
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: 0 auto;
-            border-radius: 0 0 15px 15px;
         }
         .galeria {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
+            padding: 40px 20px;
             max-width: 1200px;
-            margin: 50px auto;
-            padding: 0 20px;
+            margin: 0 auto;
         }
         .galeria img {
-            max-width: 380px;
-            max-height: 280px;
-            width: auto;
-            height: auto;
+            width: 300px;
             border: 3px solid #ffcc00;
             border-radius: 12px;
-            object-fit: cover;           /* Esto arregla fotos anchas */
-            box-shadow: 0 0 15px rgba(255,204,0,0.4);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .galeria img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Modal para foto grande */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 5px solid #ffcc00;
+            border-radius: 15px;
+        }
+        .cerrar {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -52,22 +72,32 @@
         <h1>⚽ Liga de Veteranos</h1>
     </div>
 
-    <div class="partidos">
-        <h2 style="color:#ffcc00; margin-bottom:20px;">Próximos Encuentros</h2>
-        <p style="font-size:1.8rem; line-height:2.3;">
-            • Atlético San Pancho vs Marinos<br><br>
-            • Dominicanos vs Peruanos
-        </p>
-    </div>
-
-    <h2 style="margin:50px 0 25px;">Fotos de los Partidos</h2>
+    <h2 style="margin:40px 0 20px;">Fotos de los Partidos</h2>
 
     <div class="galeria">
-        <img src="foto2.jfif" alt="Foto 2">
-        <img src="equipo1.jfif" alt="Equipo 1">
+        <img src="vete1.jpg" alt="Foto 1" onclick="mostrarFoto(this)">
+        <img src="foto2.jfif" alt="Foto 2" onclick="mostrarFoto(this)">
+        <img src="equipo1.jfif" alt="Foto 3" onclick="mostrarFoto(this)">
+        <!-- Agrega más fotos aquí -->
+    </div>
+
+    <!-- Modal (foto grande) -->
+    <div id="modal" class="modal" onclick="cerrarModal()">
+        <span class="cerrar">×</span>
+        <img id="fotoGrande" src="">
     </div>
 
     <a href="index.html" style="color:#ffcc00; font-size:1.5rem; margin:50px; display:inline-block;">← Volver a Inicio</a>
+
+    <script>
+        function mostrarFoto(img) {
+            document.getElementById('fotoGrande').src = img.src;
+            document.getElementById('modal').style.display = "flex";
+        }
+        function cerrarModal() {
+            document.getElementById('modal').style.display = "none";
+        }
+    </script>
 
 </body>
 </html>
