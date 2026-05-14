@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compañeros sin filtro - La Voz de la Calle</title>
     <style>
-        body { margin:0; font-family: Arial, sans-serif; background:#0f0f0f; color:white; text-align:center; }
+        body { 
+            margin:0; 
+            font-family: Arial, sans-serif; 
+            background:#0f0f0f; 
+            color:white; 
+            text-align:center; 
+        }
         html { scroll-behavior: smooth; }
 
         .hero {
@@ -47,18 +53,6 @@
         .boton.tiktok { background: #000; }
         .boton.youtube { background: #ff0000; }
         .boton.contacto { background: #00cc66; }
-
-        .seccion {
-            padding: 110px 20px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .contact-box {
-            background: #1a1a1a;
-            padding: 60px 40px;
-            border-radius: 25px;
-            box-shadow: 0 0 40px rgba(0,204,102,0.3);
-        }
     </style>
 </head>
 <body>
@@ -73,12 +67,12 @@
             <a href="#companeros" class="boton companeros">Compañeros</a>
             <a href="https://www.tiktok.com/@companerossinfiltro" target="_blank" class="boton tiktok">TikTok</a>
             <a href="https://www.youtube.com/@Companerossinfiltro" target="_blank" class="boton youtube">YouTube</a>
-            <a href="#contacto" class="boton contacto">Contáctanos</a>
+            <a href="contacto.html" class="boton contacto">Contáctanos</a>
         </div>
     </div>
 
     <!-- COMPAÑEROS -->
-    <section id="companeros" class="seccion" style="background:#1a1a1a;">
+    <section id="companeros" class="seccion" style="background:#1a1a1a; padding:110px 20px;">
         <img src="robe1.png" alt="Roberto" style="width:100%; max-width:420px; border:5px solid #ffcc00; border-radius:15px; margin:30px auto;">
         <h2>Compañeros</h2>
         <p style="font-size:1.7rem; line-height:1.9; max-width:750px; margin:30px auto;">
@@ -87,7 +81,7 @@
     </section>
 
     <!-- EPISODIOS -->
-    <section id="episodios" class="seccion" style="background:#111;">
+    <section id="episodios" class="seccion" style="background:#111; padding:110px 20px;">
         <h2>Últimos Episodios</h2>
         <div style="background:#1a1a1a; padding:30px; margin:20px auto; border-radius:15px; max-width:700px;">
             <h3>Episodio 11</h3>
@@ -100,24 +94,6 @@
         <div style="background:#1a1a1a; padding:30px; margin:20px auto; border-radius:15px; max-width:700px;">
             <h3>Episodio 9</h3>
             <a href="https://youtu.be/PLvoZ2Jkfhs" target="_blank" style="color:#00aaff;">▶ Ver Episodio 9</a>
-        </div>
-    </section>
-
-    <!-- CONTÁCTANOS -->
-    <section id="contacto" class="seccion" style="background:#111;">
-        <div class="contact-box">
-            <h2>Contáctanos</h2>
-            <p style="font-size:1.65rem; margin:30px 0 45px;">
-                ¿Quieres mandarnos un mensaje o dejar un comentario?
-            </p>
-            
-            <form action="mailto:companerossinfiltro@gmail.com" method="post" enctype="text/plain">
-                <input type="text" name="Nombre" placeholder="Tu nombre" required>
-                <textarea name="Mensaje" rows="7" placeholder="Escribe tu mensaje aquí..." required></textarea>
-                <button type="submit" class="boton contacto" style="padding:18px 70px; font-size:1.4rem;">
-                    Enviar Mensaje
-                </button>
-            </form>
         </div>
     </section>
 
