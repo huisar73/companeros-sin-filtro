@@ -5,51 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compañeros sin filtro - La Voz de la Calle</title>
     <style>
+        :root {
+            --yellow: #ffcc00;
+        }
         body { 
             margin:0; 
-            font-family: Arial, sans-serif; 
-            background:#0f0f0f; 
-            color:white; 
-            text-align:center; 
+            font-family: 'Arial', sans-serif; 
+            background:#0a0a0a; 
+            color:#eee; 
         }
-        html { scroll-behavior: smooth; }
-
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('robe.jfif') center/cover no-repeat;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('robe.jfif') center/cover no-repeat;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
             padding: 20px;
         }
-        h1 { font-size: 4.2rem; margin: 10px 0 8px; text-shadow: 4px 4px 25px black; }
-        p { font-size: 2rem; margin-bottom: 40px; text-shadow: 3px 3px 15px black; }
+        h1 { 
+            font-size: clamp(2.8rem, 8vw, 5.5rem); 
+            margin: 10px 0 5px; 
+            text-shadow: 0 0 30px var(--yellow);
+        }
+        p { font-size: clamp(1.6rem, 4.5vw, 2.3rem); margin-bottom: 40px; }
 
         .botones {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 12px;
             max-width: 100%;
+            padding: 0 10px;
         }
         .boton {
-            flex: 1 1 280px;
-            max-width: 280px;
-            padding: 18px 30px;
+            flex: 1 1 260px;
+            padding: 18px 25px;
             color: white;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
             border: 3px solid rgba(255,255,255,0.9);
             transition: all 0.3s;
         }
-        .boton:hover { transform: scale(1.1); box-shadow: 0 0 25px rgba(255,204,0,0.8); }
+        .boton:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 25px var(--yellow);
+        }
 
-        .boton.liga { background: #ffcc00; color: black; }
+        .boton.liga { background: var(--yellow); color: black; }
         .boton.episodios { background: #00aaff; }
-        .boton.companeros { background: #ff8800; }
+        .boton.companeros { background: #ff6600; }
         .boton.tiktok { background: #000; }
         .boton.youtube { background: #ff0000; }
         .boton.contacto { background: #00cc66; }
@@ -70,32 +78,6 @@
             <a href="contacto.html" class="boton contacto">Contáctanos</a>
         </div>
     </div>
-
-    <!-- COMPAÑEROS -->
-    <section id="companeros" class="seccion" style="background:#1a1a1a; padding:110px 20px;">
-        <img src="robe1.png" alt="Roberto" style="width:100%; max-width:420px; border:5px solid #ffcc00; border-radius:15px; margin:30px auto;">
-        <h2>Compañeros</h2>
-        <p style="font-size:1.7rem; line-height:1.9; max-width:750px; margin:30px auto;">
-            “Soy Roberto, anfitrión de ‘Compañeros sin filtro’. Cada semana, invito voces reales para hablar sin máscaras, sin censura, y sobre todo. Historias auténticas, opiniones sin miedo, y una conversación que te hará pensar y sentir. Únete a la conversación: aquí no hay filtros.”
-        </p>
-    </section>
-
-    <!-- EPISODIOS -->
-    <section id="episodios" class="seccion" style="background:#111; padding:110px 20px;">
-        <h2>Últimos Episodios</h2>
-        <div style="background:#1a1a1a; padding:30px; margin:20px auto; border-radius:15px; max-width:700px;">
-            <h3>Episodio 11</h3>
-            <a href="https://youtu.be/YSZiBGLQhJQ" target="_blank" style="color:#00aaff;">▶ Ver Episodio 11</a>
-        </div>
-        <div style="background:#1a1a1a; padding:30px; margin:20px auto; border-radius:15px; max-width:700px;">
-            <h3>Episodio 10</h3>
-            <a href="https://youtu.be/AAf1Zcb3Ezw" target="_blank" style="color:#00aaff;">▶ Ver Episodio 10</a>
-        </div>
-        <div style="background:#1a1a1a; padding:30px; margin:20px auto; border-radius:15px; max-width:700px;">
-            <h3>Episodio 9</h3>
-            <a href="https://youtu.be/PLvoZ2Jkfhs" target="_blank" style="color:#00aaff;">▶ Ver Episodio 9</a>
-        </div>
-    </section>
 
 </body>
 </html>
