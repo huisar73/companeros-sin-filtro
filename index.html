@@ -95,17 +95,20 @@
         </div>
     </section>
 
-    <!-- CONTÁCTANOS -->
-    <section id="contacto" style="padding:100px 20px; background:#1a1a1a;">
-        <h2>Contáctanos</h2>
-        <p style="font-size:1.6rem; margin:30px 0;">Deja tu comentario o mensaje</p>
-        
-        <form action="mailto:companerossinfiltro@gmail.com" method="post" enctype="text/plain" style="max-width:600px; margin:0 auto;">
-            <input type="text" name="Nombre" placeholder="Tu nombre" required><br>
-            <textarea name="Mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea><br>
-            <button type="submit" class="boton contacto" style="cursor:pointer;">Enviar Mensaje</button>
-        </form>
+       <!-- CONTÁCTANOS - Versión Bonita -->
+    <section id="contacto" style="padding:120px 20px; background:#111;">
+        <div style="background:#1a1a1a; padding:60px 40px; border-radius:25px; max-width:700px; margin:0 auto; box-shadow:0 0 40px rgba(0,204,102,0.3);">
+            <h2 style="font-size:3rem; margin-bottom:20px;">Contáctanos</h2>
+            <p style="font-size:1.7rem; margin-bottom:40px;">
+                ¿Quieres mandarnos un mensaje, invitarnos o dejar un comentario?
+            </p>
+            
+            <form action="mailto:companerossinfiltro@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="Nombre" placeholder="Tu nombre" required style="width:100%; padding:16px; margin:12px 0; background:#222; border:2px solid #00cc66; border-radius:12px; color:white; font-size:1.1rem;">
+                <textarea name="Mensaje" rows="7" placeholder="Escribe tu mensaje aquí..." required style="width:100%; padding:16px; margin:12px 0; background:#222; border:2px solid #00cc66; border-radius:12px; color:white; font-size:1.1rem;"></textarea>
+                <button type="submit" style="background:#00cc66; color:black; padding:18px 60px; font-size:1.4rem; border:none; border-radius:50px; cursor:pointer; font-weight:bold;">
+                    Enviar Mensaje
+                </button>
+            </form>
+        </div>
     </section>
-
-</body>
-</html>
