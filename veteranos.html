@@ -39,7 +39,7 @@
             transform: scale(1.05);
         }
 
-        /* Modal para foto grande */
+        /* Modal foto grande */
         .modal {
             display: none;
             position: fixed;
@@ -60,7 +60,7 @@
             position: absolute;
             top: 20px;
             right: 30px;
-            font-size: 40px;
+            font-size: 50px;
             color: white;
             cursor: pointer;
         }
@@ -78,10 +78,12 @@
         <img src="vete1.jpg" alt="Foto 1" onclick="mostrarFoto(this)">
         <img src="foto2.jfif" alt="Foto 2" onclick="mostrarFoto(this)">
         <img src="equipo1.jfif" alt="Foto 3" onclick="mostrarFoto(this)">
-        <!-- Agrega más fotos aquí -->
+        <img src="selfie.png" alt="Selfie" onclick="mostrarFoto(this)">
+        <img src="leija.png" alt="Leija" onclick="mostrarFoto(this)">
+        <img src="colombia.jpeg" alt="Colombia" onclick="mostrarFoto(this)">
     </div>
 
-    <!-- Modal (foto grande) -->
+    <!-- Modal foto grande -->
     <div id="modal" class="modal" onclick="cerrarModal()">
         <span class="cerrar">×</span>
         <img id="fotoGrande" src="">
