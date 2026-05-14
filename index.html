@@ -23,21 +23,20 @@
             align-items: center;
             padding: 20px;
         }
-        h1 { font-size: clamp(3rem, 8vw, 5.2rem); margin: 10px 0 8px; text-shadow: 4px 4px 25px black; }
-        p { font-size: clamp(1.6rem, 5vw, 2.2rem); margin-bottom: 40px; text-shadow: 3px 3px 15px black; }
+        h1 { font-size: 4.2rem; margin: 10px 0 8px; text-shadow: 4px 4px 25px black; }
+        p { font-size: 2rem; margin-bottom: 40px; text-shadow: 3px 3px 15px black; }
 
         .botones {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 14px;
             max-width: 100%;
-            padding: 0 10px;
         }
         .boton {
-            flex: 1 1 260px;
+            flex: 1 1 280px;
             max-width: 280px;
-            padding: 18px 25px;
+            padding: 18px 30px;
             color: white;
             font-size: 1.25rem;
             text-decoration: none;
@@ -46,7 +45,7 @@
             border: 3px solid rgba(255,255,255,0.9);
             transition: all 0.3s;
         }
-        .boton:hover { transform: scale(1.08); box-shadow: 0 0 25px rgba(255,204,0,0.8); }
+        .boton:hover { transform: scale(1.1); box-shadow: 0 0 25px rgba(255,204,0,0.8); }
 
         .boton.liga { background: #ffcc00; color: black; }
         .boton.episodios { background: #00aaff; }
@@ -56,7 +55,7 @@
         .boton.contacto { background: #00cc66; }
 
         .seccion {
-            padding: 110px 20px;
+            padding: 120px 20px;
             max-width: 900px;
             margin: 0 auto;
         }
@@ -65,6 +64,21 @@
             padding: 60px 40px;
             border-radius: 25px;
             box-shadow: 0 0 40px rgba(0,204,102,0.3);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 18px;
+            margin: 12px 0;
+            background: #222;
+            border: 2px solid #00cc66;
+            border-radius: 12px;
+            color: white;
+            font-size: 1.1rem;
+        }
+        input:focus, textarea:focus {
+            border-color: #ffcc00;
+            outline: none;
+            box-shadow: 0 0 10px #ffcc00;
         }
     </style>
 </head>
@@ -84,33 +98,7 @@
         </div>
     </div>
 
-    <!-- COMPAÑEROS -->
-    <section id="companeros" class="seccion" style="background:#1a1a1a;">
-        <img src="robe1.png" alt="Roberto" style="width:100%; max-width:420px; border:5px solid #ffcc00; border-radius:15px; margin:30px auto;">
-        <h2>Compañeros</h2>
-        <p style="font-size:1.7rem; line-height:1.9; max-width:750px; margin:30px auto;">
-            “Soy Roberto, anfitrión de ‘Compañeros sin filtro’. Cada semana, invito voces reales para hablar sin máscaras, sin censura, y sobre todo. Historias auténticas, opiniones sin miedo, y una conversación que te hará pensar y sentir. Únete a la conversación: aquí no hay filtros.”
-        </p>
-    </section>
-
-    <!-- EPISODIOS -->
-    <section id="episodios" class="seccion" style="background:#111;">
-        <h2>Últimos Episodios</h2>
-        <div style="background:#1a1a1a; padding:30px; margin:20px auto; border-radius:15px; max-width:700px;">
-            <h3>Episodio 11</h3>
-            <a href="https://youtu.be/YSZiBGLQhJQ" target="_blank" style="color:#00aaff;">▶ Ver Episodio 11</a>
-        </div>
-        <div style="background:#1a1a1a; padding:30px; margin:20px auto; border-radius:15px; max-width:700px;">
-            <h3>Episodio 10</h3>
-            <a href="https://youtu.be/AAf1Zcb3Ezw" target="_blank" style="color:#00aaff;">▶ Ver Episodio 10</a>
-        </div>
-        <div style="background:#1a1a1a; padding:30px; margin:20px auto; border-radius:15px; max-width:700px;">
-            <h3>Episodio 9</h3>
-            <a href="https://youtu.be/PLvoZ2Jkfhs" target="_blank" style="color:#00aaff;">▶ Ver Episodio 9</a>
-        </div>
-    </section>
-
-    <!-- CONTÁCTANOS -->
+    <!-- CONTÁCTANOS MEJORADO -->
     <section id="contacto" class="seccion" style="background:#111;">
         <div class="contact-box">
             <h2>Contáctanos</h2>
