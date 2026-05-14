@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compañeros sin filtro - La Voz de la Calle</title>
     <style>
-        body { margin:0; font-family: Arial, sans-serif; background:#0f0f0f; color:white; text-align:center; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
+
+        body { 
+            margin:0; 
+            font-family: 'Inter', Arial, sans-serif; 
+            background:#0f0f0f; 
+            color:white; 
+            text-align:center; 
+        }
         html { scroll-behavior: smooth; }
 
         .hero {
@@ -17,8 +25,19 @@
             align-items: center;
             padding: 20px;
         }
-        h1 { font-size: 3.8rem; margin: 10px 0 5px; text-shadow: 4px 4px 20px black; }
-        p { font-size: 2rem; margin-bottom: 40px; text-shadow: 3px 3px 15px black; }
+        h1 { 
+            font-family: 'Playfair Display', serif;
+            font-size: 4.2rem; 
+            margin: 10px 0 5px; 
+            text-shadow: 4px 4px 20px black; 
+            letter-spacing: 1px;
+        }
+        p { 
+            font-size: 2rem; 
+            margin-bottom: 40px; 
+            text-shadow: 3px 3px 15px black; 
+            opacity: 0.95;
+        }
         
         .botones {
             display: flex;
@@ -69,46 +88,5 @@
         </div>
     </div>
 
-    <!-- COMPAÑEROS -->
-    <section id="companeros" style="padding:100px 20px; background:#1a1a1a;">
-        <img src="robe1.png" alt="Roberto" style="width:100%; max-width:420px; border:5px solid #ffcc00; border-radius:15px; margin:30px auto;">
-        <h2>Compañeros</h2>
-        <p style="font-size:1.7rem; line-height:1.9; max-width:750px; margin:30px auto;">
-            “Soy Roberto, anfitrión de ‘Compañeros sin filtro’. Cada semana, invito voces reales para hablar sin máscaras, sin censura, y sobre todo. Historias auténticas, opiniones sin miedo, y una conversación que te hará pensar y sentir. Únete a la conversación: aquí no hay filtros.”
-        </p>
-    </section>
-
-    <!-- EPISODIOS -->
-    <section id="episodios" style="padding:100px 20px; background:#111;">
-        <h2>Últimos Episodios</h2>
-        <div style="background:#1a1a1a; padding:30px; margin:20px auto; border-radius:15px; max-width:700px;">
-            <h3>Episodio 11</h3>
-            <a href="https://youtu.be/YSZiBGLQhJQ" target="_blank" style="color:#00aaff;">▶ Ver Episodio 11</a>
-        </div>
-        <div style="background:#1a1a1a; padding:30px; margin:20px auto; border-radius:15px; max-width:700px;">
-            <h3>Episodio 10</h3>
-            <a href="https://youtu.be/AAf1Zcb3Ezw" target="_blank" style="color:#00aaff;">▶ Ver Episodio 10</a>
-        </div>
-        <div style="background:#1a1a1a; padding:30px; margin:20px auto; border-radius:15px; max-width:700px;">
-            <h3>Episodio 9</h3>
-            <a href="https://youtu.be/PLvoZ2Jkfhs" target="_blank" style="color:#00aaff;">▶ Ver Episodio 9</a>
-        </div>
-    </section>
-
-       <!-- CONTÁCTANOS - Versión Bonita -->
-    <section id="contacto" style="padding:120px 20px; background:#111;">
-        <div style="background:#1a1a1a; padding:60px 40px; border-radius:25px; max-width:700px; margin:0 auto; box-shadow:0 0 40px rgba(0,204,102,0.3);">
-            <h2 style="font-size:3rem; margin-bottom:20px;">Contáctanos</h2>
-            <p style="font-size:1.7rem; margin-bottom:40px;">
-                ¿Quieres mandarnos un mensaje, invitarnos o dejar un comentario?
-            </p>
-            
-            <form action="mailto:companerossinfiltro@gmail.com" method="post" enctype="text/plain">
-                <input type="text" name="Nombre" placeholder="Tu nombre" required style="width:100%; padding:16px; margin:12px 0; background:#222; border:2px solid #00cc66; border-radius:12px; color:white; font-size:1.1rem;">
-                <textarea name="Mensaje" rows="7" placeholder="Escribe tu mensaje aquí..." required style="width:100%; padding:16px; margin:12px 0; background:#222; border:2px solid #00cc66; border-radius:12px; color:white; font-size:1.1rem;"></textarea>
-                <button type="submit" style="background:#00cc66; color:black; padding:18px 60px; font-size:1.4rem; border:none; border-radius:50px; cursor:pointer; font-weight:bold;">
-                    Enviar Mensaje
-                </button>
-            </form>
-        </div>
-    </section>
+</body>
+</html>
