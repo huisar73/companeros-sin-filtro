@@ -3,14 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compañeros sin filtro</title>
+    <title>Compañeros sin filtro - La Voz de la Calle</title>
     <style>
-        body { background:#0f0f0f; color:white; text-align:center; padding:100px 20px; font-family:Arial; }
-        h1 { font-size: 3.5rem; color:#ffcc00; text-shadow: 0 0 30px #ffcc00; }
+        body { 
+            margin:0; 
+            font-family: Arial, sans-serif; 
+            background:#0f0f0f; 
+            color:white; 
+            text-align:center; 
+        }
+        html { scroll-behavior: smooth; }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('robe.jfif') center/cover no-repeat;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        h1 { 
+            font-size: 4rem; 
+            margin: 10px 0 8px; 
+            text-shadow: 0 0 40px #ffcc00;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 20px #ffcc00; }
+            to { text-shadow: 0 0 40px #ffcc00; }
+        }
+        p { font-size: 2rem; margin-bottom: 40px; text-shadow: 3px 3px 15px black; }
+
+        .botones {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 100%;
+        }
+        .boton {
+            flex: 1 1 280px;
+            max-width: 280px;
+            padding: 18px 30px;
+            color: white;
+            font-size: 1.25rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            border: 3px solid rgba(255,255,255,0.9);
+            transition: all 0.4s;
+        }
+
+        .boton:hover {
+            transform: scale(1.12);
+            box-shadow: 0 0 30px #ffcc00;
+        }
+
+        .boton.liga { background: #ffcc00; color: black; }
+        .boton.episodios { background: #00aaff; }
+        .boton.companeros { background: #ff8800; }
+        .boton.tiktok { background: #000; }
+        .boton.youtube { background: #ff0000; }
+        .boton.contacto { background: #00cc66; }
     </style>
 </head>
 <body>
-    <h1>¿Ves este texto amarillo grande con brillo?</h1>
-    <p>Si lo ves, ya cargó el nuevo código.</p>
+
+    <div class="hero">
+        <h1>Compañeros sin filtro</h1>
+        <p>La Voz de la Calle</p>
+        
+        <div class="botones">
+            <a href="veteranos.html" class="boton liga">Liga Veteranos</a>
+            <a href="#episodios" class="boton episodios">Episodios</a>
+            <a href="#companeros" class="boton companeros">Compañeros</a>
+            <a href="https://www.tiktok.com/@companerossinfiltro" target="_blank" class="boton tiktok">TikTok</a>
+            <a href="https://www.youtube.com/@Companerossinfiltro" target="_blank" class="boton youtube">YouTube</a>
+            <a href="#contacto" class="boton contacto">Contáctanos</a>
+        </div>
+    </div>
+
+    <!-- COMPAÑEROS -->
+    <section id="companeros" style="padding:100px 20px; background:#1a1a1a;">
+        <img src="robe1.png" alt="Roberto" style="width:100%; max-width:420px; border:5px solid #ffcc00; border-radius:15px; margin:30px auto;">
+        <h2>Compañeros</h2>
+        <p style="font-size:1.7rem; line-height:1.9; max-width:750px; margin:30px auto;">
+            “Soy Roberto, anfitrión de ‘Compañeros sin filtro’. Cada semana, invito voces reales para hablar sin máscaras, sin censura, y sobre todo. Historias auténticas, opiniones sin miedo, y una conversación que te hará pensar y sentir. Únete a la conversación: aquí no hay filtros.”
+        </p>
+    </section>
+
 </body>
 </html>
