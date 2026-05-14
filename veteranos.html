@@ -14,10 +14,15 @@
         }
         .hero {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('vete1.jpg') center/cover no-repeat;
-            height: 65vh;
+            height: 60vh; /* Bajamos un poco el hero */
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        .hero h1 {
+            font-size: 4.5rem; /* Más grande */
+            margin: 0;
+            text-shadow: 4px 4px 25px black;
         }
         .galeria {
             display: flex;
@@ -69,7 +74,7 @@
 <body>
 
     <div class="hero">
-        <h1 style="font-size: 3.8rem;">Veteranos 50+</h1>
+        <h1>Veteranos 50+</h1>
     </div>
 
     <h2 style="margin:40px 0 20px;">Fotos de los Partidos</h2>
