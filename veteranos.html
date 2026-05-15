@@ -12,11 +12,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            padding-top: 80px;   /* ← Esto baja el título */
         }
         h1 {
             font-size: 4.5rem;
             text-shadow: 0 0 40px #ffcc00;
             animation: glow 3s infinite alternate;
+            margin-top: 40px;    /* Bajamos un poco más el título */
         }
         @keyframes glow { from {text-shadow: 0 0 20px #ffcc00;} to {text-shadow: 0 0 70px #ffcc00;} }
 
@@ -98,7 +100,7 @@
         <a href="#galeria" class="nav-boton">Galería</a>
     </div>
 
-    <!-- 2. PRÓXIMOS PARTIDOS -->
+    <!-- PRÓXIMOS PARTIDOS -->
     <section id="schedule" class="seccion" style="background:#1a1a1a;">
         <h2>Próximos Partidos ⚽</h2>
         <div class="card">
@@ -111,7 +113,7 @@
         </div>
     </section>
 
-    <!-- 4. RESULTADOS -->
+    <!-- RESULTADOS -->
     <section id="resultados" class="seccion" style="background:#111;">
         <h2>Resultados</h2>
         <div class="card">
