@@ -5,70 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veteranos 50+</title>
     <style>
-        body { 
-            margin:0; 
-            font-family: Arial, sans-serif; 
-            background:#0f0f0f; 
-            color:white; 
-            text-align:center; 
-        }
+        body { margin:0; font-family: Arial, sans-serif; background:#0f0f0f; color:white; text-align:center; }
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('vete1.jpg') center/cover no-repeat;
-            height: 60vh; /* Bajamos un poco el hero */
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('vete1.jpg') center/cover no-repeat;
+            min-height: 65vh;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        .hero h1 {
-            font-size: 4.5rem; /* Más grande */
-            margin: 0;
-            text-shadow: 4px 4px 25px black;
+        h1 {
+            font-size: 4.5rem;
+            text-shadow: 0 0 40px #ffcc00;
+            animation: glow 3s infinite alternate;
         }
+        @keyframes glow { from {text-shadow: 0 0 20px #ffcc00;} to {text-shadow: 0 0 70px #ffcc00;} }
+
+        .seccion { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
+        .card { background:#1a1a1a; padding:25px; margin:15px auto; border-radius:15px; max-width:700px; }
+
         .galeria {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 30px 20px;
         }
         .galeria img {
             width: 300px;
             border: 3px solid #ffcc00;
             border-radius: 12px;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: 0.3s;
         }
-        .galeria img:hover {
-            transform: scale(1.05);
-        }
+        .galeria img:hover { transform: scale(1.05); }
 
         /* Modal foto grande */
         .modal {
-            display: none;
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.95);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
+            display: none; position: fixed; top:0; left:0;
+            width:100%; height:100%; background:rgba(0,0,0,0.95);
+            z-index: 1000; align-items:center; justify-content:center;
         }
-        .modal img {
-            max-width: 90%;
-            max-height: 90%;
-            border: 5px solid #ffcc00;
-            border-radius: 15px;
-        }
-        .cerrar {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 50px;
-            color: white;
-            cursor: pointer;
-        }
+        .modal img { max-width:90%; max-height:90%; border:5px solid #ffcc00; border-radius:15px; }
+        .cerrar { position:absolute; top:20px; right:30px; font-size:50px; color:white; cursor:pointer; }
     </style>
 </head>
 <body>
@@ -77,24 +55,51 @@
         <h1>Veteranos 50+</h1>
     </div>
 
-    <h2 style="margin:40px 0 20px;">Fotos de los Partidos</h2>
+    <!-- 2. PRÓXIMOS PARTIDOS -->
+    <section class="seccion" style="background:#1a1a1a;">
+        <h2>Próximos Partidos ⚽</h2>
+        <div class="card">
+            <strong>Atlético San Pancho vs Marinos</strong><br>
+            Miércoles - Hora por confirmar
+        </div>
+        <div class="card">
+            <strong>Dominicanos vs Peruanos</strong><br>
+            Miércoles - Hora por confirmar
+        </div>
+    </section>
 
-    <div class="galeria">
-        <img src="vete1.jpg" alt="Foto 1" onclick="mostrarFoto(this)">
-        <img src="foto2.jfif" alt="Foto 2" onclick="mostrarFoto(this)">
-        <img src="equipo1.jfif" alt="Foto 3" onclick="mostrarFoto(this)">
-        <img src="selfie.png" alt="Selfie" onclick="mostrarFoto(this)">
-        <img src="leija.png" alt="Leija" onclick="mostrarFoto(this)">
-        <img src="colombia.jpeg" alt="Colombia" onclick="mostrarFoto(this)">
-    </div>
+    <!-- GALERÍA GENERAL -->
+    <section class="seccion" style="background:#111;">
+        <h2>Galería de la Liga</h2>
+        <div class="galeria">
+            <img src="vete1.jpg" alt="Foto 1" onclick="mostrarFoto(this)">
+            <img src="foto2.jfif" alt="Foto 2" onclick="mostrarFoto(this)">
+            <img src="equipo1.jfif" alt="Foto 3" onclick="mostrarFoto(this)">
+            <img src="selfie.png" alt="Selfie" onclick="mostrarFoto(this)">
+            <img src="leija.png" alt="Leija" onclick="mostrarFoto(this)">
+            <img src="colombia.jpeg" alt="Colombia" onclick="mostrarFoto(this)">
+        </div>
+    </section>
 
-    <!-- Modal foto grande -->
-    <div id="modal" class="modal" onclick="cerrarModal()">
-        <span class="cerrar">×</span>
-        <img id="fotoGrande" src="">
-    </div>
+    <!-- 4. RESULTADOS / NOTICIAS DE LA CALLE -->
+    <section class="seccion" style="background:#1a1a1a;">
+        <h2>Resultados y Noticias de la Calle</h2>
+        <div class="card">
+            <strong>Último resultado:</strong> Dominicanos 3 - 2 Peruanos<br>
+            Gran partido el fin de semana pasado 🔥
+        </div>
+        <div class="card">
+            <strong>Próxima fecha:</strong> Miércoles - Liga Veteranos 50+
+        </div>
+    </section>
 
     <a href="index.html" style="color:#ffcc00; font-size:1.5rem; margin:50px; display:inline-block;">← Volver a Inicio</a>
+
+    <!-- Modal foto grande -->
+    <div id="modal" class="modal" onclick="if(event.target.id==='modal')cerrarModal()">
+        <span class="cerrar" onclick="cerrarModal()">×</span>
+        <img id="fotoGrande" src="">
+    </div>
 
     <script>
         function mostrarFoto(img) {
