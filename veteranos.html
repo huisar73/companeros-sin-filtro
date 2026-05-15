@@ -47,8 +47,9 @@
         }
 
         .seccion { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+        .card { background:#1a1a1a; padding:25px; margin:15px auto; border-radius:15px; max-width:700px; }
 
-        /* GALERÍA MÁS BONITA */
+        /* GALERÍA BONITA */
         .galeria {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -69,10 +70,6 @@
         .galeria-item img {
             width: 100%;
             display: block;
-            transition: 0.4s;
-        }
-        .galeria-item:hover img {
-            transform: scale(1.1);
         }
         .galeria-caption {
             position: absolute;
@@ -83,16 +80,7 @@
             color: white;
             padding: 20px 15px 15px;
             font-size: 1.1rem;
-            text-align: center;
         }
-
-        .modal {
-            display: none; position: fixed; top:0; left:0;
-            width:100%; height:100%; background:rgba(0,0,0,0.95);
-            z-index: 1000; align-items:center; justify-content:center;
-        }
-        .modal img { max-width:92%; max-height:92%; border:6px solid #ffcc00; border-radius:20px; }
-        .cerrar { position:absolute; top:25px; right:35px; font-size:60px; color:white; cursor:pointer; }
     </style>
 </head>
 <body>
@@ -101,6 +89,7 @@
         <h1>Veteranos 50+</h1>
     </div>
 
+    <!-- BOTONES -->
     <div class="nav-botones">
         <a href="#schedule" class="nav-boton">Próximos Partidos</a>
         <a href="#resultados" class="nav-boton">Resultados</a>
@@ -108,54 +97,54 @@
         <a href="#galeria" class="nav-boton">Galería</a>
     </div>
 
-    <!-- GALERÍA MEJORADA -->
+    <!-- PRÓXIMOS PARTIDOS -->
+    <section id="schedule" class="seccion" style="background:#1a1a1a;">
+        <h2>Próximos Partidos ⚽</h2>
+        <div class="card">
+            <strong>Atlético San Pancho vs Marinos</strong><br>
+            Miércoles - Hora por confirmar
+        </div>
+        <div class="card">
+            <strong>Dominicanos vs Peruanos</strong><br>
+            Miércoles - Hora por confirmar
+        </div>
+    </section>
+
+    <!-- RESULTADOS -->
+    <section id="resultados" class="seccion" style="background:#111;">
+        <h2>Resultados</h2>
+        <div class="card">
+            <strong>Último partido:</strong> Dominicanos 3 - 2 Peruanos<br>
+            Gran juego el fin de semana 🔥
+        </div>
+    </section>
+
+    <!-- TABLA GENERAL -->
+    <section id="tabla" class="seccion" style="background:#1a1a1a;">
+        <h2>Tabla General</h2>
+        <table style="width:100%; max-width:700px; margin:20px auto; border-collapse:collapse; background:#1a1a1a;">
+            <tr><th>Pos</th><th>Equipo</th><th>Pts</th><th>PJ</th><th>GF</th><th>GC</th></tr>
+            <tr><td>1</td><td>Dominicanos</td><td>12</td><td>5</td><td>18</td><td>9</td></tr>
+            <tr><td>2</td><td>Atlético San Pancho</td><td>10</td><td>5</td><td>15</td><td>11</td></tr>
+            <tr><td>3</td><td>Marinos</td><td>7</td><td>5</td><td>12</td><td>13</td></tr>
+            <tr><td>4</td><td>Peruanos</td><td>4</td><td>5</td><td>10</td><td>14</td></tr>
+        </table>
+    </section>
+
+    <!-- GALERÍA BONITA -->
     <section id="galeria" class="seccion" style="background:#111;">
         <h2>Galería de la Liga</h2>
         <div class="galeria">
-            <div class="galeria-item">
-                <img src="vete1.jpg" onclick="mostrarFoto(this)">
-                <div class="galeria-caption">Partido en la cancha</div>
-            </div>
-            <div class="galeria-item">
-                <img src="foto2.jfif" onclick="mostrarFoto(this)">
-                <div class="galeria-caption">Acción del juego</div>
-            </div>
-            <div class="galeria-item">
-                <img src="equipo1.jfif" onclick="mostrarFoto(this)">
-                <div class="galeria-caption">Los equipos juntos</div>
-            </div>
-            <div class="galeria-item">
-                <img src="selfie.png" onclick="mostrarFoto(this)">
-                <div class="galeria-caption">Selfie de los veteranos</div>
-            </div>
-            <div class="galeria-item">
-                <img src="leija.png" onclick="mostrarFoto(this)">
-                <div class="galeria-caption">Leija en acción</div>
-            </div>
-            <div class="galeria-item">
-                <img src="colombia.jpeg" onclick="mostrarFoto(this)">
-                <div class="galeria-caption">Los colombianos</div>
-            </div>
+            <div class="galeria-item"><img src="vete1.jpg" alt=""><div class="galeria-caption">Partido en la cancha</div></div>
+            <div class="galeria-item"><img src="foto2.jfif" alt=""><div class="galeria-caption">Acción del juego</div></div>
+            <div class="galeria-item"><img src="equipo1.jfif" alt=""><div class="galeria-caption">Los equipos juntos</div></div>
+            <div class="galeria-item"><img src="selfie.png" alt=""><div class="galeria-caption">Selfie de los veteranos</div></div>
+            <div class="galeria-item"><img src="leija.png" alt=""><div class="galeria-caption">Leija en acción</div></div>
+            <div class="galeria-item"><img src="colombia.jpeg" alt=""><div class="galeria-caption">Los colombianos</div></div>
         </div>
     </section>
 
     <a href="index.html" style="color:#ffcc00; font-size:1.5rem; margin:60px 0; display:inline-block;">← Volver a Inicio</a>
-
-    <!-- Modal -->
-    <div id="modal" class="modal" onclick="if(event.target.id==='modal')cerrarModal()">
-        <span class="cerrar" onclick="cerrarModal()">×</span>
-        <img id="fotoGrande" src="">
-    </div>
-
-    <script>
-        function mostrarFoto(img) {
-            document.getElementById('fotoGrande').src = img.src;
-            document.getElementById('modal').style.display = "flex";
-        }
-        function cerrarModal() {
-            document.getElementById('modal').style.display = "none";
-        }
-    </script>
 
 </body>
 </html>
