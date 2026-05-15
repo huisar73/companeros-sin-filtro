@@ -3,23 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta para iPhone / App -->
     <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#ffcc00">
-<!-- Splash Screen y App mejorada -->
-<link rel="apple-touch-icon" href="robe1.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="Compañeros sin filtro">
-<meta name="theme-color" content="#ffcc00">
+    <meta name="theme-color" content="#ffcc00">
+    <link rel="apple-touch-icon" href="robe1.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Compañeros sin filtro">
+
     <title>Compañeros sin filtro - La Voz de la Calle</title>
     <style>
-        body { 
-            margin:0; 
-            font-family: Arial, sans-serif; 
-            background:#0f0f0f; 
-            color:white; 
-            text-align:center; 
-        }
+        body { margin:0; font-family: Arial, sans-serif; background:#0f0f0f; color:white; text-align:center; }
         html { scroll-behavior: smooth; }
 
         .hero {
@@ -31,11 +26,9 @@
             align-items: center;
             padding: 20px;
         }
-
-        /* TÍTULO LOGO ANIMADO */
-        h1 {
-            font-size: clamp(3rem, 9vw, 5.8rem);
-            margin: 10px 0 8px;
+        h1 { 
+            font-size: clamp(3rem, 9vw, 5.8rem); 
+            margin: 10px 0 8px; 
             font-weight: 900;
             letter-spacing: 4px;
             background: linear-gradient(90deg, #ffcc00, #fff, #ffcc00);
@@ -48,12 +41,7 @@
             from { text-shadow: 0 0 20px #ffcc00; }
             to   { text-shadow: 0 0 70px #ffcc00; }
         }
-
-        p { 
-            font-size: 2rem; 
-            margin-bottom: 45px; 
-            text-shadow: 3px 3px 15px black; 
-        }
+        p { font-size: 2rem; margin-bottom: 45px; text-shadow: 3px 3px 15px black; }
 
         .botones {
             display: flex;
@@ -131,12 +119,6 @@
             <a href="https://youtu.be/PLvoZ2Jkfhs" target="_blank" style="color:#00aaff;">▶ Ver Episodio 9</a>
         </div>
     </section>
-<script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-            .then(() => console.log('✅ App lista para instalar'))
-            .catch(err => console.log('Error:', err));
-    }
-</script>
+
 </body>
 </html>
