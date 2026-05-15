@@ -41,42 +41,12 @@
             border: 3px solid #fff;
             transition: all 0.3s;
         }
-        .nav-boton:hover {
-            transform: scale(1.08);
-            background: #fff;
-        }
+        .nav-boton:hover { transform: scale(1.08); background: #fff; }
 
         .seccion { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
         .card { background:#1a1a1a; padding:25px; margin:15px auto; border-radius:15px; max-width:700px; }
 
-        /* TABLA GENERAL MEJORADA */
-        table {
-            width: 100%;
-            max-width: 720px;
-            margin: 25px auto;
-            border-collapse: collapse;
-            background: #1a1a1a;
-            border: 3px solid #ffcc00;
-        }
-        th, td {
-            padding: 14px 10px;
-            border: 2px solid #ffcc00;
-            text-align: center;
-        }
-        th {
-            background: #ffcc00;
-            color: black;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-        tr:nth-child(even) {
-            background: #222;
-        }
-        tr:hover {
-            background: #333;
-        }
-
-        /* Galería (se mantiene bonita) */
+        /* GALERÍA BONITA */
         .galeria {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -88,6 +58,7 @@
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            cursor: pointer;
             transition: all 0.4s;
         }
         .galeria-item:hover {
@@ -100,13 +71,37 @@
         }
         .galeria-caption {
             position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            bottom: 0; left: 0; right: 0;
             background: linear-gradient(transparent, rgba(0,0,0,0.85));
             color: white;
             padding: 20px 15px 15px;
             font-size: 1.1rem;
+        }
+
+        /* Modal - Foto grande */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal img {
+            max-width: 92%;
+            max-height: 92%;
+            border: 6px solid #ffcc00;
+            border-radius: 20px;
+        }
+        .cerrar {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            font-size: 60px;
+            color: white;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -145,18 +140,11 @@
         </div>
     </section>
 
-    <!-- TABLA GENERAL MEJORADA -->
+    <!-- TABLA GENERAL -->
     <section id="tabla" class="seccion" style="background:#1a1a1a;">
         <h2>Tabla General</h2>
-        <table>
-            <tr>
-                <th>Pos</th>
-                <th>Equipo</th>
-                <th>Pts</th>
-                <th>PJ</th>
-                <th>GF</th>
-                <th>GC</th>
-            </tr>
+        <table style="width:100%; max-width:720px; margin:25px auto; border-collapse:collapse; background:#1a1a1a;">
+            <tr><th>Pos</th><th>Equipo</th><th>Pts</th><th>PJ</th><th>GF</th><th>GC</th></tr>
             <tr><td>1</td><td>Dominicanos</td><td>12</td><td>5</td><td>18</td><td>9</td></tr>
             <tr><td>2</td><td>Atlético San Pancho</td><td>10</td><td>5</td><td>15</td><td>11</td></tr>
             <tr><td>3</td><td>Marinos</td><td>7</td><td>5</td><td>12</td><td>13</td></tr>
@@ -164,20 +152,54 @@
         </table>
     </section>
 
-    <!-- GALERÍA -->
+    <!-- GALERÍA BONITA + CLICK PARA AGRANDAR -->
     <section id="galeria" class="seccion" style="background:#111;">
         <h2>Galería de la Liga</h2>
         <div class="galeria">
-            <div class="galeria-item"><img src="vete1.jpg" alt=""><div class="galeria-caption">Partido en la cancha</div></div>
-            <div class="galeria-item"><img src="foto2.jfif" alt=""><div class="galeria-caption">Acción del juego</div></div>
-            <div class="galeria-item"><img src="equipo1.jfif" alt=""><div class="galeria-caption">Los equipos juntos</div></div>
-            <div class="galeria-item"><img src="selfie.png" alt=""><div class="galeria-caption">Selfie de los veteranos</div></div>
-            <div class="galeria-item"><img src="leija.png" alt=""><div class="galeria-caption">Leija en acción</div></div>
-            <div class="galeria-item"><img src="colombia.jpeg" alt=""><div class="galeria-caption">Los colombianos</div></div>
+            <div class="galeria-item" onclick="mostrarFoto(this.querySelector('img'))">
+                <img src="vete1.jpg" alt="">
+                <div class="galeria-caption">Partido en la cancha</div>
+            </div>
+            <div class="galeria-item" onclick="mostrarFoto(this.querySelector('img'))">
+                <img src="foto2.jfif" alt="">
+                <div class="galeria-caption">Acción del juego</div>
+            </div>
+            <div class="galeria-item" onclick="mostrarFoto(this.querySelector('img'))">
+                <img src="equipo1.jfif" alt="">
+                <div class="galeria-caption">Los equipos juntos</div>
+            </div>
+            <div class="galeria-item" onclick="mostrarFoto(this.querySelector('img'))">
+                <img src="selfie.png" alt="">
+                <div class="galeria-caption">Selfie de los veteranos</div>
+            </div>
+            <div class="galeria-item" onclick="mostrarFoto(this.querySelector('img'))">
+                <img src="leija.png" alt="">
+                <div class="galeria-caption">Leija en acción</div>
+            </div>
+            <div class="galeria-item" onclick="mostrarFoto(this.querySelector('img'))">
+                <img src="colombia.jpeg" alt="">
+                <div class="galeria-caption">Los colombianos</div>
+            </div>
         </div>
     </section>
 
     <a href="index.html" style="color:#ffcc00; font-size:1.5rem; margin:60px 0; display:inline-block;">← Volver a Inicio</a>
+
+    <!-- Modal Foto Grande -->
+    <div id="modal" class="modal" onclick="if(event.target.id==='modal')cerrarModal()">
+        <span class="cerrar" onclick="cerrarModal()">×</span>
+        <img id="fotoGrande" src="">
+    </div>
+
+    <script>
+        function mostrarFoto(img) {
+            document.getElementById('fotoGrande').src = img.src;
+            document.getElementById('modal').style.display = "flex";
+        }
+        function cerrarModal() {
+            document.getElementById('modal').style.display = "none";
+        }
+    </script>
 
 </body>
 </html>
