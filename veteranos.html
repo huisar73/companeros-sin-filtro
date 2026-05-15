@@ -20,6 +20,32 @@
         }
         @keyframes glow { from {text-shadow: 0 0 20px #ffcc00;} to {text-shadow: 0 0 70px #ffcc00;} }
 
+        .nav-botones {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 30px 20px;
+            background: #1a1a1a;
+        }
+        .nav-boton {
+            flex: 1 1 220px;
+            max-width: 280px;
+            padding: 18px 25px;
+            background: #ffcc00;
+            color: black;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            border: 3px solid #fff;
+            transition: all 0.3s;
+        }
+        .nav-boton:hover {
+            transform: scale(1.08);
+            background: #fff;
+        }
+
         .seccion { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
         .card { background:#1a1a1a; padding:25px; margin:15px auto; border-radius:15px; max-width:700px; }
 
@@ -39,7 +65,6 @@
         }
         .galeria img:hover { transform: scale(1.05); }
 
-        /* Modal foto grande */
         .modal {
             display: none; position: fixed; top:0; left:0;
             width:100%; height:100%; background:rgba(0,0,0,0.95);
@@ -47,6 +72,16 @@
         }
         .modal img { max-width:90%; max-height:90%; border:5px solid #ffcc00; border-radius:15px; }
         .cerrar { position:absolute; top:20px; right:30px; font-size:50px; color:white; cursor:pointer; }
+
+        table {
+            width: 100%;
+            max-width: 700px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: #1a1a1a;
+        }
+        th, td { padding: 12px; border: 1px solid #ffcc00; }
+        th { background: #ffcc00; color: black; }
     </style>
 </head>
 <body>
@@ -55,8 +90,16 @@
         <h1>Veteranos 50+</h1>
     </div>
 
+    <!-- BOTONES DE NAVEGACIÓN -->
+    <div class="nav-botones">
+        <a href="#schedule" class="nav-boton">Próximos Partidos</a>
+        <a href="#resultados" class="nav-boton">Resultados</a>
+        <a href="#tabla" class="nav-boton">Tabla General</a>
+        <a href="#galeria" class="nav-boton">Galería</a>
+    </div>
+
     <!-- 2. PRÓXIMOS PARTIDOS -->
-    <section class="seccion" style="background:#1a1a1a;">
+    <section id="schedule" class="seccion" style="background:#1a1a1a;">
         <h2>Próximos Partidos ⚽</h2>
         <div class="card">
             <strong>Atlético San Pancho vs Marinos</strong><br>
@@ -68,8 +111,29 @@
         </div>
     </section>
 
-    <!-- GALERÍA GENERAL -->
-    <section class="seccion" style="background:#111;">
+    <!-- 4. RESULTADOS -->
+    <section id="resultados" class="seccion" style="background:#111;">
+        <h2>Resultados</h2>
+        <div class="card">
+            <strong>Último partido:</strong> Dominicanos 3 - 2 Peruanos<br>
+            Gran juego el fin de semana 🔥
+        </div>
+    </section>
+
+    <!-- TABLA GENERAL -->
+    <section id="tabla" class="seccion" style="background:#1a1a1a;">
+        <h2>Tabla General</h2>
+        <table>
+            <tr><th>Pos</th><th>Equipo</th><th>Pts</th><th>PJ</th><th>GF</th><th>GC</th></tr>
+            <tr><td>1</td><td>Dominicanos</td><td>12</td><td>5</td><td>18</td><td>9</td></tr>
+            <tr><td>2</td><td>Atlético San Pancho</td><td>10</td><td>5</td><td>15</td><td>11</td></tr>
+            <tr><td>3</td><td>Marinos</td><td>7</td><td>5</td><td>12</td><td>13</td></tr>
+            <tr><td>4</td><td>Peruanos</td><td>4</td><td>5</td><td>10</td><td>14</td></tr>
+        </table>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria" class="seccion" style="background:#111;">
         <h2>Galería de la Liga</h2>
         <div class="galeria">
             <img src="vete1.jpg" alt="Foto 1" onclick="mostrarFoto(this)">
@@ -81,19 +145,7 @@
         </div>
     </section>
 
-    <!-- 4. RESULTADOS / NOTICIAS DE LA CALLE -->
-    <section class="seccion" style="background:#1a1a1a;">
-        <h2>Resultados y Noticias de la Calle</h2>
-        <div class="card">
-            <strong>Último resultado:</strong> Dominicanos 3 - 2 Peruanos<br>
-            Gran partido el fin de semana pasado 🔥
-        </div>
-        <div class="card">
-            <strong>Próxima fecha:</strong> Miércoles - Liga Veteranos 50+
-        </div>
-    </section>
-
-    <a href="index.html" style="color:#ffcc00; font-size:1.5rem; margin:50px; display:inline-block;">← Volver a Inicio</a>
+    <a href="index.html" style="color:#ffcc00; font-size:1.5rem; margin:60px 0; display:inline-block;">← Volver a Inicio</a>
 
     <!-- Modal foto grande -->
     <div id="modal" class="modal" onclick="if(event.target.id==='modal')cerrarModal()">
