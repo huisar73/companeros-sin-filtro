@@ -1,0 +1,17 @@
+{
+  "name": "Compañeros sin filtro",
+  "short_name": "Compañeros",
+  "description": "La Voz de la Calle - Podcast y Liga Veteranos 50+",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0f0f0f",
+  "theme_color": "#ffcc00",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "robe1.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

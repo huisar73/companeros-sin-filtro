@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ffcc00">
     <title>Compañeros sin filtro - La Voz de la Calle</title>
     <style>
         body { 
@@ -123,6 +125,12 @@
             <a href="https://youtu.be/PLvoZ2Jkfhs" target="_blank" style="color:#00aaff;">▶ Ver Episodio 9</a>
         </div>
     </section>
-
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+            .then(() => console.log('✅ App lista para instalar'))
+            .catch(err => console.log('Error:', err));
+    }
+</script>
 </body>
 </html>

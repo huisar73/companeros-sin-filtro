@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ffcc00">
     <title>Veteranos 50+</title>
     <style>
         body { margin:0; font-family: Arial, sans-serif; background:#0f0f0f; color:white; text-align:center; }
@@ -164,6 +166,12 @@
             document.getElementById('modal').style.display = "none";
         }
     </script>
-
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+            .then(() => console.log('✅ App lista para instalar'))
+            .catch(err => console.log('Error:', err));
+    }
+</script>
 </body>
 </html>
