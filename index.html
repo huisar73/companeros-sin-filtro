@@ -3,128 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compañeros sin Filtro - Podcast con historias reales, sin censura. La voz de la calle.">
     
-    <!-- Configuración PWA para iPhone -->
+    <!-- PWA / iPhone -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#ffcc00">
     <link rel="apple-touch-icon" href="robe1.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Compañeros sin filtro">
-    
-    <!-- Mejora de splash screen para iPhone -->
     <link rel="apple-touch-startup-image" href="robe1.png">
     
     <title>Compañeros sin filtro - La Voz de la Calle</title>
-    <!-- Aquí sigue tu <style> normal -->
-
-    <title>Compañeros sin filtro - La Voz de la Calle</title>
+    
     <style>
-        body { margin:0; font-family: Arial, sans-serif; background:#0f0f0f; color:white; text-align:center; }
-        html { scroll-behavior: smooth; }
+        /* ===== VARIABLES CSS ===== */
+        :root {
+            --bg-primary: #0f0f0f;
+            --bg-secondary: #1a1a1a;
+            --bg-card: #1e1e2e;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --accent: #ffcc00;
+            --accent-glow: rgba(255, 204, 0, 0.6);
+            --blue: #00aaff;
+            --orange: #ff8800;
+            --green: #00cc66;
+            --red: #ff0000;
+            --radius: 20px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
+        /* ===== BASE ===== */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ===== HERO ===== */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('robe.jfif') center/cover no-repeat;
+            background: linear-gradient(135deg, rgba(15,15,15,0.9), rgba(30,30,46,0.95)), 
+                        url('robe.jfif') center/cover no-repeat fixed;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 2rem 1.5rem;
+            text-align: center;
         }
-        h1 { 
-            font-size: clamp(3rem, 9vw, 5.8rem); 
-            margin: 10px 0 8px; 
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
             font-weight: 900;
-            letter-spacing: 4px;
-            background: linear-gradient(90deg, #ffcc00, #fff, #ffcc00);
+            letter-spacing: 3px;
+            margin: 0.5rem 0;
+            background: linear-gradient(90deg, var(--accent), #fff, var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 40px #ffcc00;
-            animation: logoAnim 3s ease-in-out infinite alternate;
+            text-shadow: 0 0 40px var(--accent-glow);
+            animation: glow 3s ease-in-out infinite alternate;
         }
-        @keyframes logoAnim {
-            from { text-shadow: 0 0 20px #ffcc00; }
-            to   { text-shadow: 0 0 70px #ffcc00; }
-        }
-        p { font-size: 2rem; margin-bottom: 45px; text-shadow: 3px 3px 15px black; }
 
+        @keyframes glow {
+            from { text-shadow: 0 0 20px var(--accent-glow); }
+            to { text-shadow: 0 0 60px var(--accent-glow), 0 0 100px var(--accent); }
+        }
+
+        .hero p {
+            font-size: clamp(1.3rem, 4vw, 2rem);
+            margin: 1rem 0 2.5rem;
+            color: var(--text-secondary);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        /* ===== BOTONES ===== */
         .botones {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 1rem;
             max-width: 100%;
         }
+
         .boton {
-            flex: 1 1 280px;
+            flex: 1 1 250px;
             max-width: 280px;
-            padding: 18px 30px;
+            padding: 1rem 1.8rem;
             color: white;
-            font-size: 1.25rem;
+            font-size: 1.1rem;
+            font-weight: 600;
             text-decoration: none;
             border-radius: 50px;
-            font-weight: bold;
-            border: 3px solid rgba(255,255,255,0.9);
-            transition: all 0.3s;
+            border: 2px solid rgba(255,255,255,0.8);
+            background: linear-gradient(135deg, #333, #222);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
         }
-        .boton:hover { transform: scale(1.1); box-shadow: 0 0 25px rgba(255,204,0,0.8); }
 
-        .boton.liga { background: #ffcc00; color: black; }
-        .boton.episodios { background: #00aaff; }
-        .boton.companeros { background: #ff8800; }
-        .boton.tiktok { background: #000; }
-        .boton.youtube { background: #ff0000; }
-        .boton.contacto { background: #00cc66; }
+        .boton:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 10px 30px var(--accent-glow);
+            border-color: var(--accent);
+        }
 
+        .boton.liga { background: linear-gradient(135deg, var(--accent), #e6b800); color: #000; }
+        .boton.episodios { background: linear-gradient(135deg, var(--blue), #0088cc); }
+        .boton.companeros { background: linear-gradient(135deg, var(--orange), #cc6600); }
+        .boton.tiktok { background: linear-gradient(135deg, #000, #333); }
+        .boton.youtube { background: linear-gradient(135deg, var(--red), #cc0000); }
+        .boton.contacto { background: linear-gradient(135deg, var(--green), #00994d); }
+
+        /* ===== SECCIONES ===== */
         .seccion {
-            padding: 110px 20px;
-            max-width: 950px;
+            padding: 5rem 1.5rem;
+            max-width: 900px;
             margin: 0 auto;
         }
-    </style>
-</head>
-<body>
 
-    <div class="hero">
-        <h1>Compañeros sin filtro</h1>
-        <p>La Voz de la Calle</p>
-        
-        <div class="botones">
-            <a href="veteranos.html" class="boton liga">Liga Veteranos</a>
-            <a href="#episodios" class="boton episodios">Episodios</a>
-            <a href="#companeros" class="boton companeros">Compañeros</a>
-            <a href="https://www.tiktok.com/@companerossinfiltro" target="_blank" class="boton tiktok">TikTok</a>
-            <a href="https://www.youtube.com/@Companerossinfiltro" target="_blank" class="boton youtube">YouTube</a>
-            <a href="contacto.html" class="boton contacto">Contáctanos</a>
-        </div>
-    </div>
+        .seccion h2 {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-    <!-- COMPAÑEROS -->
-    <section id="companeros" class="seccion" style="background:#1a1a1a;">
-        <img src="robe1.png" alt="Roberto" style="width:100%; max-width:420px; border:5px solid #ffcc00; border-radius:15px; margin:30px auto;">
-        <h2>Compañeros</h2>
-        <p style="font-size:1.7rem; line-height:1.9; max-width:750px; margin:30px auto;">
-            “Soy Roberto, anfitrión de ‘Compañeros sin filtro’. Cada semana, invito voces reales para hablar sin máscaras, sin censura, y sobre todo. Historias auténticas, opiniones sin miedo, y una conversación que te hará pensar y sentir. Únete a la conversación: aquí no hay filtros.”
-        </p>
-    </section>
+        .seccion h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
 
-    <!-- EPISODIOS -->
-    <section id="episodios" class="seccion" style="background:#111;">
-        <h2>Últimos Episodios</h2>
-        <div style="background:#1a1a1a; padding:30px; margin:20px auto; border-radius:15px; max-width:700px;">
-            <h3>Episodio 11</h3>
-            <a href="https://youtu.be/YSZiBGLQhJQ" target="_blank" style="color:#00aaff;">▶ Ver Episodio 11</a>
-        </div>
-        <div style="background:#1a1a1a; padding:30px; margin:20px auto; border-radius:15px; max-width:700px;">
-            <h3>Episodio 10</h3>
-            <a href="https://youtu.be/AAf1Zcb3Ezw" target="_blank" style="color:#00aaff;">▶ Ver Episodio 10</a>
-        </div>
-        <div style="background:#1a1a1a; padding:30px; margin:20px auto; border-radius:15px; max-width:700px;">
-            <h3>Episodio 9</h3>
-            <a href="https://youtu.be/PLvoZ2Jkfhs" target="_blank" style="color:#00aaff;">▶ Ver Episodio 9</a>
-        </div>
-    </section>
+        /* ===== TARJETA COMPAÑERO ===== */
+        .companero-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 700px;
+            text-align: center;
+            border: 1px solid rgba(255,204,0,0.2);
+        }
 
-</body>
-</html>
+        .companero-img {
+            width: 100%;
+            max-width: 350px;
+            border: 4px solid var(--accent);
+            border-radius: 15px;
+            margin: 1rem auto;
+            display: block;
+            transition: var(--transition);
+        }
+        .companero-img:hover { transform: scale(1.02); box-shadow: 0 10px 40px var(--accent-glow); }
+
+        .bio {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            max-width: 650px;
+            margin: 1.5rem auto;
+        }
+
+        /* ===== EPISODIOS ===== */
+        .episodio-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 1.8rem;
+            margin: 1.2rem auto;
+            max-width: 700px;
+            border-left: 4px solid var(--
