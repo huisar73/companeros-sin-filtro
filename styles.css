@@ -447,4 +447,21 @@ transform: scale(1.05);
 
 .hero, .seccion {
   animation: fadeIn 0.8s ease-out;
+}.boton.youtube {
+  background: #FF0000;
+  color: white;
+}
+
+.boton.spotify {
+  background: #1DB954;
+  color: white;
+}
+
+.boton.contacto {
+  background: #00afff;
+  color: white;
+}
+
+.boton:hover {
+  opacity: 0.9;
 }
